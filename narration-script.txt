@@ -1,0 +1,11 @@
+[calm] Every week, [excited] another voice model drops. Faster, cheaper, better at something. [calm] But which one do you actually pick?
+
+[excited] Speko benchmarks every model — speech, voices, and the models that drive them. [calm] Accuracy. Latency. Cost — all in one place.
+
+[excited] Just describe your agent, and Speko builds it — and writes the tests for you.
+
+[calm] Every scenario, scored. Pass, or fail — before a single customer ever calls.
+
+[calm] Then it watches production live, [excited] flagging the moment something needs attention.
+
+[excited] Speko. Benchmark everything. Ship the best. [whispers] Guess nothing.

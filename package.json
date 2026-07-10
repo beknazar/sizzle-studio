@@ -1,0 +1,29 @@
+{
+  "name": "sizzle-studio",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "remotion studio",
+    "compositions": "remotion compositions",
+    "voice": "bun gen-audio.mjs",
+    "voices": "bun gen-voice-samples.mjs",
+    "render": "remotion render SpekoSizzle out/sizzle.mp4 --codec=h264 --scale=2 --crf=15",
+    "render:light": "remotion render SpekoSizzleLight out/sizzle-light.mp4 --codec=h264 --scale=2 --crf=15",
+    "render:both": "bun run render && bun run render:light",
+    "render:preview": "remotion render SpekoSizzle out/preview.mp4 --codec=h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "@remotion/media-utils": "^4.0.0",
+    "@remotion/shapes": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.5.0"
+  }
+}

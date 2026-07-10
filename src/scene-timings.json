@@ -1,0 +1,9 @@
+{
+  "Problem": [0, 172],
+  "Benchmark": [172, 362],
+  "Create": [362, 448],
+  "StackPick": [448, 620],
+  "Coval": [620, 990],
+  "Monitor": [990, 1284],
+  "Resolution": [1284, 1500]
+}
