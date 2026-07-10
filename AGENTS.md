@@ -39,6 +39,7 @@ Narration scripts, on-screen copy, commit messages, docs: plain ASCII punctuatio
 ```bash
 bun install
 bun run dev            # Remotion Studio - live scrubbing
+bun run typecheck      # tsc --noEmit (keep this green)
 bun run compositions   # list compositions (SpekoSizzle, SpekoSizzleLight)
 bun run render         # 4K dark master -> out/sizzle.mp4
 bun run render:light   # 4K light master -> out/sizzle-light.mp4
@@ -78,7 +79,7 @@ Only these are supported; anything else is stripped automatically and never read
 
 ### After regenerating audio (important)
 
-The committed film ships with its final, hand-timed audio files (`narration-a.mp3`, `narration-b.mp3`, `agent-line.mp3`). `bun run voice` writes `narration.wav` for the NEW version. After regenerating:
+The committed film ships with its final, hand-timed audio files (`narration-a.mp3`, `narration-b.wav`, `agent-line.mp3`). `bun run voice` writes `narration.wav` for the NEW version. After regenerating:
 
 1. Point the `<Audio>` tracks in `src/SpekoSizzle.tsx` at the new file (usually simplify to one narration track).
 2. Re-time `src/scene-timings.json` using the word timestamps in `public/captions.json`.

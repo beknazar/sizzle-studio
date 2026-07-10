@@ -1,5 +1,5 @@
 [whispers] That... was your agent. [excited] Testing itself! Every scenario scored, before a single customer ever calls.
 
-[calm] In production, it watches every call... [curious] and the second a model slips? [excited] Speko heals itself. Re-picks the stack. Recovers... automatically!
+[calm] In production, it watches every call... [nervous] and the second a model slips? [excited] Speko flags it... with the better stack, ready to ship.
 
 [calm] You write the logic. [excited] Speko picks the models... [whispers] and keeps them the best.

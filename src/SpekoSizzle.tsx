@@ -22,7 +22,7 @@ const SCENES: [string, React.FC][] = [
 // Audio layout (30fps, 1.2x-tempo VO):
 //   narration-a.mp3  frames    0-568  (VO 1-4: churn -> re-evaluates -> describe -> picks your stack)
 //   agent-line.mp3   frames  614-760  (the agent's own voice on its self-test call, over Coval)
-//   narration-b.mp3  frames 766-1416  (VO 5-7: reveal -> self-heal -> closer)
+//   narration-b.wav  frames 766-1398  (VO 5-7: reveal -> suggested fix -> closer)
 const AGENT_FROM = 614;
 const NARR_B_FROM = 766;
 
@@ -48,7 +48,7 @@ export const SpekoSizzle: React.FC<{ mode?: 'dark' | 'light' }> = ({ mode = 'dar
           <Audio src={staticFile('agent-line.mp3')} volume={0.9} />
         </Sequence>
         <Sequence from={NARR_B_FROM}>
-          <Audio src={staticFile('narration-b.mp3')} volume={0.9} />
+          <Audio src={staticFile('narration-b.wav')} volume={0.9} />
         </Sequence>
       </AbsoluteFill>
     </ThemeCtx.Provider>

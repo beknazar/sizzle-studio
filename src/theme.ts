@@ -23,7 +23,7 @@ const light = {
   radius: 9, radiusLg: 18,
 } as const;
 
-export type Tokens = typeof dark;
+export type Tokens = { readonly [K in keyof typeof dark]: (typeof dark)[K] extends number ? number : string };
 export const THEMES: Record<'dark' | 'light', Tokens> = { dark, light };
 export const APP = dark; // back-compat / brand logo mint
 
@@ -55,8 +55,8 @@ export const TYPE = {
 export const FPS = 30;
 export const sec = (s: number) => Math.round(s * FPS);
 
-export const EASE = {
-  out: [0.16, 1, 0.3, 1] as const,
-  in: [0.3, 0, 1, 1] as const,
-  inOut: [0.65, 0, 0.35, 1] as const,
+export const EASE: Record<'out' | 'in' | 'inOut', readonly [number, number, number, number]> = {
+  out: [0.16, 1, 0.3, 1],
+  in: [0.3, 0, 1, 1],
+  inOut: [0.65, 0, 0.35, 1],
 };

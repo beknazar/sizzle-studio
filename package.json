@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "remotion studio",
     "compositions": "remotion compositions",
+    "typecheck": "tsc --noEmit",
     "voice": "bun gen-audio.mjs",
     "voices": "bun gen-voice-samples.mjs",
     "render": "remotion render SpekoSizzle out/sizzle.mp4 --codec=h264 --scale=2 --crf=15",

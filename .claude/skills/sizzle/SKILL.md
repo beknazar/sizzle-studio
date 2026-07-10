@@ -81,7 +81,7 @@ gen-audio.mjs         narration -> public/narration.wav + captions.json (via Spe
 gen-voice-samples.mjs audition one line across voices AND providers -> voice-samples/
 narration-script.txt  the VO script with inline [tags]
 .env.example          SPEKO_API_KEY (get one at https://platform.speko.dev)
-public/               committed film audio (narration-a/b.mp3, agent-line.mp3, music.mp3)
+public/               committed film audio (narration-a.mp3, narration-b.wav, agent-line.mp3, music.mp3)
 ```
 
 ## The design kit (src/kit.tsx)
@@ -160,7 +160,7 @@ Total frames = max end value; composition duration follows automatically.
   the top of `kit.tsx` is removed. Keep that import.
 - Two-plus `<Audio>` tracks: music at `volume={0.15}`, narration at
   `volume={0.9}`, both bounded so nothing tails past the film.
-- The committed film uses split narration files (narration-a/b.mp3) with
+- The committed film uses split narration files (narration-a.mp3, narration-b.wav) with
   hand-tuned frame offsets in `SpekoSizzle.tsx`. A regenerated film normally
   uses the single `narration.wav` - simplify the audio tracks when you rewire.
 - `public/music.mp3` is an original generated ambient bed. Swap the file to
